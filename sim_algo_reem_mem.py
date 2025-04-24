@@ -36,7 +36,7 @@ def procesar(segmentos, reqs, marcos_libres):
             accion = "Marco ya estaba asignado"
         else:
             if free_frames:
-                marco = free_frames.pop()
+                marco = free_frames.pop(0)
                 tabla_paginas[pagina] = marco
                 cola_fifo.append(pagina)
                 accion = "Marco libre asignado"
